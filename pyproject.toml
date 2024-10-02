@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "crewai_tf_docs"
+version = "0.1.0"
+description = "crewai-tf-docs using crewAI"
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.13"
+crewai = { extras = ["tools"], version = "^0.51.0" }
+
+[tool.poetry.scripts]
+crewai_tf_docs = "crewai_tf_docs.main:run"
+nis2_crew = "nis2_crew.main:run"
+cvs_to_graphdb = "cvs_to_graphdb.main:run"
+run_crew = "main:run"
+train = "crewai_tf_docs.main:train"
+replay = "crewai_tf_docs.main:replay"
+test = "crewai_tf_docs.main:test"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
